@@ -1,15 +1,13 @@
-import Navbar from "./Navbar.jsx"
-
+import Navbar from "./Components/Navbar/Navbar";
+import NavbarHeader from "./Components/Navbar/NavbarHeader";
 
 function App() {
-
   return (
-    
     <div>
-      <Navbar/>
+      <NavbarHeader />
+      <Navbar />
     </div>
-
-  )
+  );
 }
 
-export default App
+export default App;

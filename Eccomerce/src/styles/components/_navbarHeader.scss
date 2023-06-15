@@ -1,0 +1,56 @@
+@import url(../_vars.scss);
+@import url(../_mixins.scss);
+
+.header {
+  & p {
+    background-color: black;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__encabezado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    & img {
+      height: 12rem;
+    }
+  }
+
+  &__Smedia {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem;
+
+    & i {
+      font-size: 2.2rem;
+      cursor: pointer;
+
+      &:hover {
+        color: red;
+        transition: all 0.2s;
+      }
+    }
+  }
+
+  &__login {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem;
+    gap: 2.4rem;
+
+    & a {
+      color: #000;
+      font-size: 2rem;
+    }
+  }
+}

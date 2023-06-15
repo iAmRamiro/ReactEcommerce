@@ -1,0 +1,28 @@
+@mixin flexible($direccion, $just, $align) {
+  display: flex;
+  flex-direction: $direccion;
+  justify-content: $just;
+  align-items: $align;
+}
+
+@mixin grid($columnas, $espacio) {
+  display: grid;
+  grid-template-columns: repeat($columnas, 1fr);
+  gap: $espacio;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 2em;
+  }
+}
+
+@mixin mq($medida: 480px) {
+  @media (max-width: $medida) {
+    @content;
+  }
+}
